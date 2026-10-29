@@ -12,8 +12,11 @@ This collection shares practical approaches to common data preparation tasks, wi
 | --- | --- |
 | [Clean text data](data-cleansing/clean-text-data.pq) | Trims and cleans text, with replacement handling for null or blank input. No external dependencies. |
 | [Clean numeric data](data-cleansing/clean-numeric-data.pq) | Checks cleaned input for numeric validity and otherwise uses a replacement. Requires clean text data. |
+| [Remove text fragments](data-cleansing/remove-text-fragments.pq) | Removes a list of characters or text fragments using sequential, case-sensitive replacements. No external dependencies. |
 
 **Setup order:** Create the text-cleaning query first and name it `clean-text-data`. Then create the numeric-cleaning query. It references the helper as `#"clean-text-data"`.
+
+**Remove text fragments:** Create a query named `remove-text-fragments` and supply input text plus a list of text values to remove. For example, `#"remove-text-fragments"("A[B]", {"[", "]"})` returns `"AB"`. If your removal values are stored in a table, pass the appropriate column as a list.
 
 ## Available text-formatting functions
 
