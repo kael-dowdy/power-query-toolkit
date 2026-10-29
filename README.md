@@ -26,13 +26,21 @@ This collection shares practical approaches to common data preparation tasks, wi
 
 **Setup:** Create a blank query, paste the function into the Advanced Editor, and name it `bullet-nonblank-lines`. Invoke it with text or null; reference its dashed name in M as `#"bullet-nonblank-lines"`.
 
+## Available date and time queries
+
+| Query | Purpose |
+| --- | --- |
+| [Minute-grain time table](dates-and-calendars/minute-grain-time-table.pq) | Generates a 24-hour time dimension with 1,440 one-minute rows, hour and minute attributes, quarter-hour and half-hour groupings, and period-of-day labels with a sort column. No external dependencies. |
+
+**Setup:** Paste the code into a blank query's Advanced Editor and name the query `minute-grain-time-table`. This query returns a table; it does not need function arguments. In Power BI, sort `Period of Day` by `Period of Day Sort` when using those labels in reports. Keep an existing query name if other queries or model objects depend on it.
+
 ## Browse by purpose
 
 | Category | What it covers |
 | --- | --- |
 | [data-cleansing](data-cleansing/) | Cleaning text, checking numeric values, removing text fragments, and related reference data. |
 | [text-formatting](text-formatting/) | Formatting text, including adding bullets to nonblank lines. |
-| `dates-and-calendars` | Date and time tables, calendar variants, and custom workweek boundaries. |
+| [dates-and-calendars](dates-and-calendars/) | Date and time tables, calendar variants, and custom workweek boundaries. |
 | `phonetic-matching` | Soundex and custom Metaphone-style keys for comparing similar-sounding text. |
 | `images` | Preparing image data and splitting Base64 text into chunks for downstream use. |
 | `data-sources` | Source connections, query examples, and preparing source-specific schemas. |
