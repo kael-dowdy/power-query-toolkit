@@ -15,12 +15,20 @@ This collection shares practical approaches to common data preparation tasks, wi
 
 **Setup order:** Create the text-cleaning query first and name it `clean-text-data`. Then create the numeric-cleaning query. It references the helper as `#"clean-text-data"`.
 
+## Available text-formatting functions
+
+| Function | Purpose |
+| --- | --- |
+| [Bullet nonblank lines](text-formatting/bullet-nonblank-lines.pq) | Trims each line, removes blank lines, and adds a bullet to each remaining line. Null input returns an empty string. No external dependencies. |
+
+**Setup:** Create a blank query, paste the function into the Advanced Editor, and name it `bullet-nonblank-lines`. Invoke it with text or null; reference its dashed name in M as `#"bullet-nonblank-lines"`.
+
 ## Browse by purpose
 
 | Category | What it covers |
 | --- | --- |
 | [data-cleansing](data-cleansing/) | Cleaning text, checking numeric values, removing text fragments, and related reference data. |
-| `text-formatting` | Formatting text, including adding bullets to nonblank lines. |
+| [text-formatting](text-formatting/) | Formatting text, including adding bullets to nonblank lines. |
 | `dates-and-calendars` | Date and time tables, calendar variants, and custom workweek boundaries. |
 | `phonetic-matching` | Soundex and custom Metaphone-style keys for comparing similar-sounding text. |
 | `images` | Preparing image data and splitting Base64 text into chunks for downstream use. |
