@@ -11,7 +11,7 @@ This collection shares practical approaches to common data preparation tasks, wi
 | Function | Purpose |
 | --- | --- |
 | [Clean text data](data-cleansing/clean-text-data.pq) | Trims and cleans text, with replacement handling for null or blank input. No external dependencies. |
-| [Clean numeric data](data-cleansing/clean-numeric-data.pq) | Checks cleaned input for numeric validity and otherwise uses a replacement. Requires clean text data; output is not guaranteed to have a numeric type. |
+| [Clean numeric data](data-cleansing/clean-numeric-data.pq) | Checks cleaned input for numeric validity and otherwise uses a replacement. Requires clean text data. |
 
 **Setup order:** Create the text-cleaning query first and name it `clean-text-data`. Then create the numeric-cleaning query. It references the helper as `#"clean-text-data"`.
 
