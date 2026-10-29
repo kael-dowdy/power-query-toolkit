@@ -34,6 +34,15 @@ This collection shares practical approaches to common data preparation tasks, wi
 
 **Setup:** Paste the code into a blank query's Advanced Editor and name the query `minute-grain-time-table`. This query returns a table; it does not need function arguments. In Power BI, sort `Period of Day` by `Period of Day Sort` when using those labels in reports. Keep an existing query name if other queries or model objects depend on it.
 
+## Available phonetic-matching functions
+
+| Function | Purpose |
+| --- | --- |
+| [Soundex](phonetic-matching/soundex.pq) | Compact, four-character Soundex-style candidate keys for name matching. This variant needs compatibility testing against other Soundex systems. |
+| [Metaphone-style key](phonetic-matching/metaphone-style-key.pq) | Custom, variable-length phonetic keys using letter-pattern substitutions. Experimental; not verified standard Metaphone or Double Metaphone. |
+
+See the [phonetic-matching guide](phonetic-matching/README.md) for differences, setup, limitations, and when to use each. Both are standalone functions; matching keys identify candidates, not confirmed matches.
+
 ## Browse by purpose
 
 | Category | What it covers |
@@ -41,7 +50,7 @@ This collection shares practical approaches to common data preparation tasks, wi
 | [data-cleansing](data-cleansing/) | Cleaning text, checking numeric values, removing text fragments, and related reference data. |
 | [text-formatting](text-formatting/) | Formatting text, including adding bullets to nonblank lines. |
 | [dates-and-calendars](dates-and-calendars/) | Date and time tables, calendar variants, and custom workweek boundaries. |
-| `phonetic-matching` | Soundex and custom Metaphone-style keys for comparing similar-sounding text. |
+| [phonetic-matching](phonetic-matching/) | Soundex and custom Metaphone-style keys for comparing similar-sounding text. |
 | `images` | Preparing image data and splitting Base64 text into chunks for downstream use. |
 | `data-sources` | Source connections, query examples, and preparing source-specific schemas. |
 
