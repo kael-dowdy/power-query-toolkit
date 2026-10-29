@@ -6,11 +6,20 @@ Created and maintained by **Kael Dowdy**, Senior Business Intelligence and Data 
 
 This collection shares practical approaches to common data preparation tasks, with documentation to help you understand, adapt, and use each example. Examples are published incrementally as they are reviewed and documented.
 
+## Available data-cleansing functions
+
+| Function | Purpose |
+| --- | --- |
+| [Clean text data](data-cleansing/clean-text-data.pq) | Trims and cleans text, with replacement handling for null or blank input. No external dependencies. |
+| [Clean numeric data](data-cleansing/clean-numeric-data.pq) | Checks cleaned input for numeric validity and otherwise uses a replacement. Requires clean text data; output is not guaranteed to have a numeric type. |
+
+**Setup order:** Create the text-cleaning query first and name it `clean-text-data`. Then create the numeric-cleaning query. It references the helper as `#"clean-text-data"`.
+
 ## Browse by purpose
 
 | Category | What it covers |
 | --- | --- |
-| `data-cleansing` | Cleaning text, checking numeric values, removing text fragments, and related reference data. |
+| [data-cleansing](data-cleansing/) | Cleaning text, checking numeric values, removing text fragments, and related reference data. |
 | `text-formatting` | Formatting text, including adding bullets to nonblank lines. |
 | `dates-and-calendars` | Date and time tables, calendar variants, and custom workweek boundaries. |
 | `phonetic-matching` | Soundex and custom Metaphone-style keys for comparing similar-sounding text. |
